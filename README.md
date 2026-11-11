@@ -19,7 +19,7 @@ So I generated a 256 Bytes valid vbmeta image using the avbtool function "make_v
 Finally, I use dd to overwrite the first 256 Bytes of the test vbmeta with the valid vbmeta and that made the phone boot TWRP.
 
 ## Commands ##
-This wwas created on a Linux-based Operating System so it will follow commands for it: avbtool version (1.4.0), included in this repository, dd
+This was created on a Linux-based Operating System so it will follow commands for it: avbtool version (1.4.0), included in this repository, dd
 
 1. chmod +x avbtool.py
 2. ./avbtool.py generate_test_image --image_size 4096 --output vbmeta_test.img
