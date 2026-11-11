@@ -17,3 +17,13 @@ To solve the issue, I tried generating a test image with the avbtool argument "g
 So I generated a 256 Bytes valid vbmeta image using the avbtool function "make_vbmeta_image", with the rollback index set to 13, then I generated a 4Kb test vbmeta image with "generate_test_image".
 
 Finally, I use dd to overwrite the first 256 Bytes of the test vbmeta with the valid vbmeta and that made the phone boot TWRP.
+
+## Commands ##
+This wwas created on a Linux-based Operating System so it will follow commands for it: avbtool version (1.4.0), included in this repository, dd
+
+1. chmod +x avbtool.py
+2. ./avbtool.py generate_test_image --image_size 4096 --output vbmeta_test.img
+3. ./avbtool.py make_vbmeta_image --flags 2 --rollback_index 13 --output header.img
+4. dd if=hdr.img of=vbmeta_test.img conv=notrunc
+
+You should have now a working vbmeta image
