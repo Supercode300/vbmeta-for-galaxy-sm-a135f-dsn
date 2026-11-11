@@ -24,6 +24,6 @@ This wwas created on a Linux-based Operating System so it will follow commands f
 1. chmod +x avbtool.py
 2. ./avbtool.py generate_test_image --image_size 4096 --output vbmeta_test.img
 3. ./avbtool.py make_vbmeta_image --flags 2 --rollback_index 13 --output header.img
-4. dd if=hdr.img of=vbmeta_test.img conv=notrunc
+4. dd if=header.img of=vbmeta_test.img conv=notrunc
 
 You should have now a working vbmeta image
