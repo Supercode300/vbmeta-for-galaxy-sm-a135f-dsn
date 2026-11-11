@@ -1,5 +1,8 @@
 # vbmeta-for-galaxy-sm-a135f-dsn
-This is a vbmeta img for the Samsung Galaxy SM-A135F/DSN
+This is a vbmeta img for the Samsung Galaxy SM-A135F/DSN.
+
+## Where does this work? ##
+It is important that you know this vbmeta image has been tested only on the DSN variant of the Samsung Galaxy A135F and that your bootloader revision must be equal to 0xd. Any other binary or device is not guaranteed to work with this vbmeta.
 
 ## Important Note ##
 Important note: I was helped by AI because I am not a professional, sorry.
@@ -13,4 +16,4 @@ To solve the issue, I tried generating a test image with the avbtool argument "g
 
 So I generated a 256 Bytes valid vbmeta image using the avbtool function "make_vbmeta_image", with the rollback index set to 13, then I generated a 4Kb test vbmeta image with "generate_test_image".
 
-Finally, I use dd to overwrite the first 256 Bytes of the test vbmeta with the valid vbmeta and that made the phone boot TWRP
+Finally, I use dd to overwrite the first 256 Bytes of the test vbmeta with the valid vbmeta and that made the phone boot TWRP.
